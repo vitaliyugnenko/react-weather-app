@@ -1,0 +1,191 @@
+body {
+  background-color: #c4c4c4;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  margin-left: calc(100vw - 100%);
+  margin-right: 0;
+}
+
+#Main-Container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 400px;
+  box-shadow: 0 0 20px 5px rgba(0,0,0,0.19);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  position: relative;
+
+}
+
+#Top {
+  width: auto;
+  height: 60%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #4286f5;
+}
+
+#Bottom {
+  width: auto;
+  height: 40%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.19);
+  background-color: white;
+}
+
+.Forecast-Container {
+  border-collapse: collapse;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #4c83e5;
+  font-size: 16px;
+}
+
+.Forecast {
+  margin: 5px;
+  animation-delay: 0ms;
+  animation-fill-mode: both;
+  animation-name: mymove;
+}
+
+.Item0 {
+  animation-duration: 500ms;
+}
+.Item1 {
+  animation-duration: 800ms;
+}
+.Item2 {
+  animation-duration: 1100ms;
+}
+.Item3 {
+  animation-duration: 1400ms;
+}
+.Item4 {
+  animation-duration: 1700ms;
+}
+
+.Main-Weather {
+  color: white;
+  font-size: 72px;
+  animation-delay: 0ms;
+  animation-duration: 1000ms;
+  animation-fill-mode: both;
+  animation-name: mymove;
+}
+
+.Main-Weather.Data {
+  font-size: 16px;
+}
+
+.Detail-Weather {
+  font-size: 16px;
+  color: white;
+  animation-delay: 0ms;
+  animation-fill-mode: both;
+  animation-name: mymove;
+}
+
+.Detail-Weather.Pressure {
+  animation-duration: 500ms;
+}
+
+.Detail-Weather.Wind {
+  animation-duration: 800ms;
+}
+
+.Detail-Weather.Humidity {
+  animation-duration: 1100ms;
+}
+
+.Detail-Weather.Sunrise {
+  animation-duration: 1400ms;
+}
+
+.Detail-Weather.Sunset {
+  animation-duration: 1700ms;
+}
+
+.Child-Container {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.Child-Container.Left-Child {
+  justify-content: center;
+}
+
+.Child-Container.Right-Child {
+  justify-content: space-evenly;
+}
+
+@supports (-ms-ime-align:auto) { /* Edge only */
+  .Child-Container.Right-Child {
+    justify-content: space-around;
+  }
+}
+
+#Search-Input {
+  display: inline-block;
+  height: 25px;
+  width: 80%;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  box-shadow:  0 2px 2px 0 rgba(0,0,0,0.19);
+  background-color: #3367d5;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+}
+
+#Search-Input::placeholder {
+  color: white;
+  cursor: none;
+}
+
+#Search-Button {
+  display: inline-block;
+  height: 25px;
+  width: 20%;
+  border: none;
+  box-shadow:  0 2px 2px 0 rgba(0,0,0,0.19);
+  color: white;
+  background-color: #3367d5;
+  font-size: 16px;
+}
+
+#Search-Button:hover {
+  background-color: #4286f5;
+  cursor: pointer;
+}
+
+#Search-Form {
+  height: 25px;
+}
+
+@keyframes mymove {
+  0% { transform: translate(0px,50px) rotate(0deg) ; opacity: 0;  }
+  100% { transform: translate(0px,0px) rotate(0deg) ; opacity: 1;  }
+}
+
+#Main-Weather-Container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
